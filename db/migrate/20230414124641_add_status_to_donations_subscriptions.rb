@@ -4,7 +4,18 @@ class AddStatusToDonationsSubscriptions < ActiveRecord::Migration[7.0]
 
     add_column :donations_subscriptions, :status, :tinyint, null: false, default: 0
 
-    Donations::Subscription.where(active: true).update_all(status: :active)
-    Donations::Subscription.where(active: false).update_all(status: :canceled)
+    # Update active subscriptions
+    execute <<-SQL
+      UPDATE donations_subscriptions
+      SET status = 1
+      WHERE active = TRUE
+    SQL
+
+    # Update canceled subscriptions
+    execute <<-SQL
+      UPDATE donations_subscriptions
+      SET status = 2
+      WHERE active = FALSE
+    SQL
   end
 end
