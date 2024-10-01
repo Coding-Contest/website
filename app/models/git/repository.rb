@@ -125,10 +125,10 @@ module Git
     def repos_dir
       return "./test/tmp/git_repo_cache" if Rails.env.test?
 
-      "/Users/tung-lee/MyWorkspace/vbi/exercism/repos"
-      # mount_point = Exercism.config.efs_repositories_mount_point
-      # Rails.logger.info "EFS repositories mount point: #{mount_point}"
-      # mount_point
+      "./test/tmp/git_repo_cache"
+
+      # TODO: Use EFS
+      # Exercism.config.efs_repositories_mount_point
     end
 
     memoize

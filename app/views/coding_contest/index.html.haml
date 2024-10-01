@@ -1,0 +1,74 @@
+!!!
+%html
+  %head
+    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %link{crossorigin: "", href: "https://fonts.gstatic.com/", rel: "preconnect"}/
+    %link{as: "style", href: "https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800", onload: "this.rel='stylesheet'", rel: "stylesheet"}/
+    %title Galileo Design
+    %link{href: "data:image/x-icon;base64,", rel: "icon", type: "image/x-icon"}/
+    %script{src: "https://cdn.tailwindcss.com?plugins=forms,container-queries"}
+  %body
+    .relative.flex.size-full.min-h-screen.flex-col.overflow-x-hidden{class: "bg-[#FFFFFF] group/design-root", style: "font-family: \"Plus Jakarta Sans\", \"Noto Sans\", sans-serif;"}
+      .layout-container.flex.h-full.grow.flex-col
+        .gap-1.px-6.flex.flex-1.justify-center.py-5
+          .layout-content-container.flex.flex-col.flex-1{class: "max-w-[920px]"}
+            %div{class: "@container"}
+              .flex.flex-col.gap-6.px-4.py-10{class: "@[480px]:gap-8 @[864px]:flex-row"}
+                .w-full.bg-center.bg-no-repeat.aspect-video.bg-cover.rounded-xl{class: "@[480px]:h-auto @[480px]:min-w-[400px] @[864px]:w-full", style: "background-image: url(\"https://cdn.usegalileo.ai/sdxl10/21f25af9-6ab6-4c03-9c34-52623cf8bb0a.png\");"}
+                .flex.flex-col.gap-6{class: "@[480px]:min-w-[400px] @[480px]:gap-8 @[864px]:justify-center"}
+                  .flex.flex-col.gap-2.text-left
+                    %h1.text-4xl.font-black.leading-tight{class: "text-[#1C160C] tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]"}
+                      Coding Contest
+                    %h2.text-sm.font-normal.leading-normal{class: "text-[#1C160C] @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal"}
+                      Contest every week, Compete and see your ranking!
+                  %button.flex.cursor-pointer.items-center.justify-center.overflow-hidden.rounded-full.h-10.px-4.text-sm.font-bold.leading-normal{class: "min-w-[84px] max-w-[480px] @[480px]:h-12 @[480px]:px-5 bg-[#019863] text-[#FFFFFF] tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]"}
+                    %span.truncate Unbox surprise
+            .grid.gap-3.p-4{class: "grid-cols-[repeat(auto-fit,minmax(158px,1fr))]"}
+              .flex.flex-col.gap-3.pb-3
+                .w-full.bg-center.bg-no-repeat.aspect-video.bg-cover.rounded-xl{style: "background-image: url(\"https://cdn.usegalileo.ai/stability/76e963c4-80c6-4a5f-afdb-860747fa053d.png\");"}
+                %div
+                  %p.text-base.font-medium.leading-normal{class: "text-[#1C160C]"} Weekly Contest 418
+                  %p.text-sm.font-normal.leading-normal{class: "text-[#A18249]"} Starts in 4d 13h 11m
+              .flex.flex-col.gap-3.pb-3
+                .w-full.bg-center.bg-no-repeat.aspect-video.bg-cover.rounded-xl{style: "background-image: url(\"https://cdn.usegalileo.ai/sdxl10/6cbb79dc-71ac-440d-9ff8-67cd98072619.png\");"}
+                %div
+                  %p.text-base.font-medium.leading-normal{class: "text-[#1C160C]"} Biweekly Contest 141
+                  %p.text-sm.font-normal.leading-normal{class: "text-[#A18249]"} Starts in 11d 11h 11m
+            %h2.font-bold.leading-tight.px-4.pb-3.pt-5{class: "text-[#1C160C] text-[22px] tracking-[-0.015em]"} Featured Contests
+            .flex.items-center.gap-4.px-4.py-2.justify-between{class: "bg-[#FFFFFF] min-h-[72px]"}
+              .flex.items-center.gap-4
+                .flex.items-center.justify-center.rounded-lg.shrink-0.size-12{class: "text-[#1C160C] bg-[#F4EFE6]", "data-icon" => "Trophy", "data-size" => "24px", "data-weight" => "regular"}
+                  %svg{fill: "currentColor", height: "24px", viewbox: "0 0 256 256", width: "24px", xmlns: "http://www.w3.org/2000/svg"}
+                    %path{d: "M232,64H208V56a16,16,0,0,0-16-16H64A16,16,0,0,0,48,56v8H24A16,16,0,0,0,8,80V96a40,40,0,0,0,40,40h3.65A80.13,80.13,0,0,0,120,191.61V216H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16H136V191.58c31.94-3.23,58.44-25.64,68.08-55.58H208a40,40,0,0,0,40-40V80A16,16,0,0,0,232,64ZM48,120A24,24,0,0,1,24,96V80H48v32q0,4,.39,8Zm144-8.9c0,35.52-28.49,64.64-63.51,64.9H128a64,64,0,0,1-64-64V56H192ZM232,96a24,24,0,0,1-24,24h-.5a81.81,81.81,0,0,0,.5-8.9V80h24Z"}
+                .flex.flex-col.justify-center
+                  %p.text-base.font-medium.leading-normal.line-clamp-1{class: "text-[#1C160C]"} Past Contests
+                  %p.text-sm.font-normal.leading-normal.line-clamp-2{class: "text-[#A18249]"} Weekly Contest 291, Sep 26 - Weekly Contest 411, Aug 1
+              .shrink-0
+                %button.flex.cursor-pointer.items-center.justify-center.overflow-hidden.rounded-full.h-8.px-4.text-sm.font-medium.leading-normal.w-fit{class: "min-w-[84px] max-w-[480px] bg-[#F4EFE6] text-[#1C160C]"}
+                  %span.truncate View
+          .layout-content-container.flex.flex-col{class: "w-[360px]"}
+            %h3.text-lg.font-bold.leading-tight.px-4.pb-2.pt-4{class: "text-[#1C160C] tracking-[-0.015em]"} Global Ranking
+            .flex.flex-wrap.gap-3.px-4.py-3
+              .flex.flex-1.flex-col.gap-2.rounded-lg.border.p-3.items-start{class: "min-w-[111px] basis-[fit-content] border-[#E9DFCE]"}
+                %p.tracking-light.text-2xl.font-bold.leading-tight{class: "text-[#1C160C]"} 3898
+                .flex.items-center.gap-2
+                  %p.text-sm.font-normal.leading-normal{class: "text-[#A18249]"} Harry Phan
+              .flex.flex-1.flex-col.gap-2.rounded-lg.border.p-3.items-start{class: "min-w-[111px] basis-[fit-content] border-[#E9DFCE]"}
+                %p.tracking-light.text-2xl.font-bold.leading-tight{class: "text-[#1C160C]"} 289
+                .flex.items-center.gap-2
+                  %p.text-sm.font-normal.leading-normal{class: "text-[#A18249]"} tung-lee
+              .flex.flex-1.flex-col.gap-2.rounded-lg.border.p-3.items-start{class: "min-w-[111px] basis-[fit-content] border-[#E9DFCE]"}
+                %p.tracking-light.text-2xl.font-bold.leading-tight{class: "text-[#1C160C]"} 143
+                .flex.items-center.gap-2
+                  %p.text-sm.font-normal.leading-normal{class: "text-[#A18249]"} Joshua Chan
+            .grid.gap-3.p-4{class: "grid-cols-[repeat(auto-fit,minmax(158px,1fr))]"}
+              .flex.flex-col.gap-3.text-center
+                .px-4
+                  .w-full.bg-center.bg-no-repeat.aspect-square.bg-cover.rounded-full{style: "background-image: url(\"https://cdn.usegalileo.ai/sdxl10/ee8e0a47-5d3d-45a6-bf1d-7aca01187a3b.png\");"}
+              .flex.flex-col.gap-3.text-center
+                .px-4
+                  .w-full.bg-center.bg-no-repeat.aspect-square.bg-cover.rounded-full{style: "background-image: url(\"https://cdn.usegalileo.ai/sdxl10/1ad86168-e858-4195-8ee9-8a656ebd20e4.png\");"}
+              .flex.flex-col.gap-3.text-center
+                .px-4
+                  .w-full.bg-center.bg-no-repeat.aspect-square.bg-cover.rounded-full{style: "background-image: url(\"https://cdn.usegalileo.ai/sdxl10/478b0114-72a5-4abd-bbd6-2b06949729d2.png\");"}
+            %p.text-sm.font-normal.leading-normal.pb-3.pt-1.px-4{class: "text-[#A18249]"} Rating 3898 - Attended 51

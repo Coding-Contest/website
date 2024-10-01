@@ -7,7 +7,7 @@ class AddCohortToCohortMemberships < ActiveRecord::Migration[7.0]
       title: 'Go',
       blurb: 'Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.',
       repo_url: 'https://github.com/exercism/go',
-      synced_to_git_sha: 'dummy_sha',
+      synced_to_git_sha: '26635e19868f0b4fbed09a986b824cd67efdbc2e',
       num_exercises: 0,
       num_concepts: 0,
       active: true

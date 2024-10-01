@@ -39,8 +39,14 @@ class Submission::File < ApplicationRecord
   end
 
   def write_to_efs!
-    FileUtils.mkdir_p(efs_path.split("/").tap(&:pop).join("/"))
-    File.open(efs_path, 'w') { |f| f.write(utf8_content) }
+    # local
+    local_path = Rails.root.join('tmp', 'submissions', submission.uuid, filename).to_s
+    FileUtils.mkdir_p(File.dirname(local_path))
+    File.open(local_path, 'w') { |f| f.write(utf8_content) }
+
+    # EFS
+    # FileUtils.mkdir_p(efs_path.split("/").tap(&:pop).join("/"))
+    # File.open(efs_path, 'w') { |f| f.write(utf8_content) }
   end
 
   def content

@@ -18,6 +18,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
     :recoverable, :rememberable,
     :confirmable, :validatable,
+    # :validatable,
     :omniauthable, omniauth_providers: %i[github discord]
 
   has_many :auth_tokens, dependent: :destroy
@@ -369,4 +370,11 @@ class User < ApplicationRecord
       video_provider:, video_id:
     ).exists?
   end
+
+  # after_create :skip_confirmation!
+
+  # def skip_confirmation!
+  #   self.confirmed_at = Time.current
+  #   save(validate: false)
+  # end
 end

@@ -86,6 +86,11 @@ Rails.application.routes.draw do
     delete :disconnect_discord
   end
 
+  # ########################### #
+  # Coding Contest #
+  # ########################### #
+  resources :coding_contest, only: %i[index], path: 'coding-contest'
+
   resource :dashboard, only: [:show], controller: "dashboard"
 
   resources :docs, only: %i[index]
